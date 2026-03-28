@@ -133,18 +133,22 @@ project-management-dashboard/
 **Все сотрудники:**
 ```sql
 SELECT * FROM pm.employees ORDER BY employee_id;
-Все проекты:
-
+```
+**Все проекты:**
+```
 sql
 SELECT * FROM pm.projects ORDER BY project_id;
-Все задачи:
-
+```
+**Все задачи:**
+```
 sql
 SELECT * FROM pm.tasks ORDER BY task_id;
-Все назначения:
-
+```
+**Все назначения:**
+```
 sql
 SELECT * FROM pm.assignments ORDER BY assignment_id;
+```
 https://screenshots/17_jupyter_select.png
 
 Задание 5: JOIN запросы
