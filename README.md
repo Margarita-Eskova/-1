@@ -386,7 +386,9 @@ ORDER BY p.project_name, t.priority;
 <br>
 
 #### Сотрудники с их задачами:
+
 <br>
+
 ```sql
 SELECT e.first_name || ' ' || e.last_name AS employee_name, 
        e.role, t.title AS task_name
