@@ -149,7 +149,7 @@ SELECT * FROM pm.tasks ORDER BY task_id;
 sql
 SELECT * FROM pm.assignments ORDER BY assignment_id;
 ```
-https://screenshots/17_jupyter_select.png
+screenshots/17_jupyter_select.png
 
 ### Задание 5: JOIN запросы
 Задачи с названиями проектов:
@@ -201,8 +201,9 @@ project_name	status	total_tasks	assigned_employees
 Разработка CRM	В работе	3	3
 Мобильное приложение	В работе	3	3
 Внедрение BI	Планируется	2	1
-https://screenshots/18_jupyter_join.png
 ```
+https://screenshots/18_jupyter_join.png
+
 🗄️ Создание SQL дампа
 Из Jupyter Notebook был сгенерирован файл pm_dump_final.sql, содержащий:
 
@@ -226,7 +227,7 @@ https://screenshots/18_jupyter_join.png
 
 Назначений: 8
 
-https://screenshots/19_jupyter_sql_dump.png
+screenshots/19_jupyter_sql_dump.png
 
 📁 Экспорт CSV для DataLens
 Из Jupyter Notebook были созданы 5 CSV файлов для загрузки в Yandex DataLens:
@@ -237,7 +238,7 @@ datalens_projects.csv	Список проектов	3
 datalens_tasks.csv	Задачи с приоритетами	8
 datalens_assignments.csv	Назначения сотрудников	8
 datalens_dashboard.csv	Сводная статистика	3
-https://screenshots/20_jupyter_csv_export.png
+screenshots/20_jupyter_csv_export.png
 
 
 
