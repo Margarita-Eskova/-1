@@ -1,5 +1,20 @@
-# Самостоятельная работа 1
 # Project Management Dashboard 📊
+
+## 📂 Содержимое репозитория
+
+| 📄 Файл | 📝 Описание |
+|---------|-------------|
+| [📓 Задания_1_5.ipynb](Задания_1_5.ipynb) | Jupyter Notebook с выполненными заданиями 1-5 |
+| [🗄️ pm_dump_final.sql](pm_dump_final.sql) | SQL дамп базы данных (5 сотрудников, 3 проекта, 8 задач, 8 назначений) |
+| [🔗 datalens_dashboard_link.txt](datalens_dashboard_link.txt) | Ссылка на дашборд в Yandex DataLens |
+| [📁 csv_files/](csv_files/) | Папка с CSV файлами для DataLens (5 файлов) |
+| [📁 screenshots/](screenshots/) | Папка со скриншотами для отчета (21 файл) |
+
+---
+
+**🔗 Прямая ссылка на дашборд:** [https://datalens.ru/x1sorpl406pyh-project-management-dashboard](https://datalens.ru/x1sorpl406pyh-project-management-dashboard)
+
+---
 
 ## 📌 Описание проекта
 
@@ -12,7 +27,7 @@
 **Студент:** mgpu_ico_st_09  
 **Дата выполнения:** 2026-03-28
 
----
+
 
 ## 🗂️ Структура проекта
 
@@ -384,6 +399,7 @@ https://datalens.ru/x1sorpl406pyh-project-management-dashboard
 <img width="1220" height="460" alt="9" src="https://github.com/user-attachments/assets/635a1272-86c5-4817-915f-1dfdc82d2526" />
 
 **Содержание дашборда**
+
 Дашборд включает 4 интерактивные диаграммы:
 
 №	Название	Тип	Что показывает
