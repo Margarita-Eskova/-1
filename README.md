@@ -353,7 +353,7 @@ ORDER BY p.project_name, t.priority;
 <img width="756" height="492" alt="19" src="https://github.com/user-attachments/assets/67c670c7-e3cf-4f40-b2d2-f378413294ac" />
 
 **Сотрудники с их задачами:**
-
+<br>
 ```sql
 SELECT e.first_name || ' ' || e.last_name AS employee_name, 
        e.role, t.title AS task_name
@@ -362,11 +362,11 @@ JOIN pm.assignments a ON e.employee_id = a.employee_id
 JOIN pm.tasks t ON a.task_id = t.task_id
 ORDER BY e.last_name;
 ```
-
+<br>
 <img width="730" height="487" alt="20" src="https://github.com/user-attachments/assets/16dea53d-7c02-4372-9486-92ab02b5a476" />
 
 **Статистика по проектам:**
-
+<br>
 ```sql
 SELECT p.project_name, p.status,
        COUNT(DISTINCT t.task_id) AS total_tasks,
@@ -377,7 +377,7 @@ LEFT JOIN pm.assignments a ON t.task_id = a.task_id
 GROUP BY p.project_id, p.project_name, p.status
 ORDER BY total_tasks DESC;
 ```
-
+<br>
 <img width="689" height="400" alt="21" src="https://github.com/user-attachments/assets/41c6a29d-2f1e-405f-9c7a-08d8ac42aafb" />
 
 ✅ Результаты проверки
