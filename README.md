@@ -269,18 +269,25 @@ datalens_dashboard.csv	Сводная статистика	3
 SQL дамп был скопирован в текстовый файл imp.txt для удобного переноса.
 
 <img width="320" height="406" alt="10" src="https://github.com/user-attachments/assets/4181d17a-091a-4ea3-80ad-14989beea9d0" />
+
 <br>
 <br>
-<br>
+
 ### 2. Перенос файла в виртуальную машину
 Файл imp.txt был помещен в общую папку SQL_dumb для доступа из виртуальной машины.
 
 <img width="667" height="699" alt="11" src="https://github.com/user-attachments/assets/7b773661-0321-498e-921b-62a55ae12fe5" />
 
+<br>
+<br>
+
 ### 3. Локальная база данных
 Для проверки используется локальная база данных mylocaldb на порту 5433.
 
 <img width="556" height="434" alt="12" src="https://github.com/user-attachments/assets/90136157-9220-404f-8597-5c58c04bbf64" />
+
+<br>
+<br>
 
 ### 4. Монтирование и проверка файлов
 В терминале выполнено монтирование общей папки и проверка наличия файла imp.txt:
@@ -293,6 +300,9 @@ cat /mnt/sql_dumb/imp.txt
 
 <img width="566" height="639" alt="13" src="https://github.com/user-attachments/assets/a51f53dc-21a6-4f82-94e0-9abec60ad37a" />
 
+<br>
+<br>
+
 ### 5. Выполнение SQL запросов
 
 **Создание схемы:**
@@ -302,6 +312,9 @@ CREATE SCHEMA IF NOT EXISTS pm;
 ```
 
 <img width="528" height="546" alt="14" src="https://github.com/user-attachments/assets/1488dd13-6573-4e99-b30b-7cdd2254415d" />
+
+<br>
+<br>
 
 **Создание таблиц:**
 
@@ -314,6 +327,9 @@ CREATE TABLE IF NOT EXISTS assignments (...);
 
 <img width="507" height="376" alt="15" src="https://github.com/user-attachments/assets/17c3d53b-e134-45ca-9468-78ffa4b4a9e6" />
 
+<br>
+<br>
+
 **Вставка данных:**
 
 ```sql
@@ -325,6 +341,9 @@ INSERT INTO pm.assignments VALUES (...);
 
 <img width="714" height="575" alt="16" src="https://github.com/user-attachments/assets/7a729c4f-0fe4-4451-8188-61295fcda4d8" />
 
+<br>
+<br>
+
 ### 6. Проверочные запросы
 
 **Все сотрудники:**
@@ -335,6 +354,9 @@ SELECT * FROM pm.employees ORDER BY employee_id;
 
 <img width="770" height="469" alt="17" src="https://github.com/user-attachments/assets/ee1d80a1-4571-4602-8043-62f3c97e1a9f" />
 
+<br>
+<br>
+
 **Все проекты:**
 
 ```sql
@@ -342,6 +364,9 @@ SELECT * FROM pm.projects ORDER BY project_id;
 ```
 
 <img width="803" height="427" alt="18" src="https://github.com/user-attachments/assets/5db3390a-8417-4484-a3d4-77248e37105c" />
+
+<br>
+<br>
 
 **Задачи с проектами:**
 
@@ -353,6 +378,9 @@ ORDER BY p.project_name, t.priority;
 ```
 
 <img width="756" height="492" alt="19" src="https://github.com/user-attachments/assets/67c670c7-e3cf-4f40-b2d2-f378413294ac" />
+
+<br>
+<br>
 
 **Сотрудники с их задачами:**
 <br>
@@ -366,6 +394,9 @@ ORDER BY e.last_name;
 ```
 
 <img width="730" height="487" alt="20" src="https://github.com/user-attachments/assets/16dea53d-7c02-4372-9486-92ab02b5a476" />
+
+<br>
+<br>
 
 **Статистика по проектам:**
 
@@ -381,6 +412,9 @@ ORDER BY total_tasks DESC;
 ```
 
 <img width="689" height="400" alt="21" src="https://github.com/user-attachments/assets/41c6a29d-2f1e-405f-9c7a-08d8ac42aafb" />
+
+<br>
+<br>
 
 # ✅ Результаты проверки
 Проверка	Результат
