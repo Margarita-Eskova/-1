@@ -135,26 +135,26 @@ project-management-dashboard/
 SELECT * FROM pm.employees ORDER BY employee_id;
 ```
 **Все проекты:**
-```
-sql
+
+```sql
 SELECT * FROM pm.projects ORDER BY project_id;
 ```
 **Все задачи:**
-```
-sql
+
+```sql
 SELECT * FROM pm.tasks ORDER BY task_id;
 ```
 **Все назначения:**
-```
-sql
+
+```sql
 SELECT * FROM pm.assignments ORDER BY assignment_id;
 ```
 screenshots/17_jupyter_select.png
 
 ### Задание 5: JOIN запросы
 Задачи с названиями проектов:
-```
-sql
+
+```sql
 SELECT t.title AS task_name, p.project_name, t.due_date, t.priority
 FROM pm.tasks t
 JOIN pm.projects p ON t.project_id = p.project_id
@@ -170,7 +170,7 @@ task_name	project_name	due_date	priority
 Тестирование CRM	Разработка CRM	2023-12-15	2
 Сотрудники с их задачами:
 
-sql
+
 SELECT e.first_name || ' ' || e.last_name AS employee, e.role, t.title AS task, p.project_name
 FROM pm.employees e
 JOIN pm.assignments a ON e.employee_id = a.employee_id
@@ -188,7 +188,7 @@ employee	role	task	project_name
 Алексей Федоров	Тестировщик	Тестирование CRM	Разработка CRM
 Статистика по проектам:
 
-sql
+
 SELECT p.project_name, p.status,
        COUNT(DISTINCT t.task_id) AS total_tasks,
        COUNT(DISTINCT a.employee_id) AS assigned_employees
