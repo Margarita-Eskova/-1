@@ -63,6 +63,7 @@ text
 - Реализована обработка ошибок через try-except-finally
 
 ![Задание 1](screenshots/14_jupyter_clean_start.png)
+<img width="456" height="584" alt="1" src="https://github.com/user-attachments/assets/9bdac398-5ca8-4c64-a318-d0cd4da4d7e8" />
 
 ### Задание 2: Создание схемы и таблиц
 - Создана схема `pm`
