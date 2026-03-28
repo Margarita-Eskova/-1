@@ -15,43 +15,42 @@
 ---
 
 ## 🗂️ Структура проекта
+
+```
 project-management-dashboard/
-├── 📄 README.md # Описание проекта (данный файл)
-├── 📓 Задания_1_5.ipynb # Jupyter Notebook с заданиями 1-5
-├── 🗄️ pm_dump_final.sql # SQL дамп базы данных
-├── 📊 datalens_dashboard_link.txt # Ссылка на дашборд в DataLens
-├── 📁 csv_files/ # CSV файлы для DataLens
-│ ├── datalens_employees.csv # Данные о сотрудниках
-│ ├── datalens_projects.csv # Данные о проектах
-│ ├── datalens_tasks.csv # Данные о задачах
-│ ├── datalens_assignments.csv # Данные о назначениях
-│ └── datalens_dashboard.csv # Сводные данные для дашборда
-└── 📁 screenshots/ # Скриншоты для отчета
-├── 1_sql_dump_to_txt.png
-├── 2_transfer_to_vm.png
-├── 3_local_db.png
-├── 4_mount_and_check.png
-├── 5_create_schema.png
-├── 6_create_tables.png
-├── 7_insert_data.png
-├── 8_table_statistics.png
-├── 9_all_employees.png
-├── 10_all_projects.png
-├── 11_tasks_with_projects.png
-├── 12_employees_with_tasks.png
-├── 13_project_statistics.png
-├── 14_jupyter_clean_start.png
-├── 15_jupyter_create_tables.png
-├── 16_jupyter_insert_data.png
-├── 17_jupyter_select.png
-├── 18_jupyter_join.png
-├── 19_jupyter_sql_dump.png
-├── 20_jupyter_csv_export.png
-└── 21_datalens_dashboard.png
-
-text
-
----
+├── 📄 README.md                          # Описание проекта (данный файл)
+├── 📓 Задания_1_5.ipynb                  # Jupyter Notebook с заданиями 1-5
+├── 🗄️ pm_dump_final.sql                  # SQL дамп базы данных
+├── 📊 datalens_dashboard_link.txt        # Ссылка на дашборд в DataLens
+├── 📁 csv_files/                         # CSV файлы для DataLens
+│   ├── datalens_employees.csv            # Данные о сотрудниках
+│   ├── datalens_projects.csv             # Данные о проектах
+│   ├── datalens_tasks.csv                # Данные о задачах
+│   ├── datalens_assignments.csv          # Данные о назначениях
+│   └── datalens_dashboard.csv            # Сводные данные для дашборда
+└── 📁 screenshots/                       # Скриншоты для отчета
+    ├── 1_sql_dump_to_txt.png
+    ├── 2_transfer_to_vm.png
+    ├── 3_local_db.png
+    ├── 4_mount_and_check.png
+    ├── 5_create_schema.png
+    ├── 6_create_tables.png
+    ├── 7_insert_data.png
+    ├── 8_table_statistics.png
+    ├── 9_all_employees.png
+    ├── 10_all_projects.png
+    ├── 11_tasks_with_projects.png
+    ├── 12_employees_with_tasks.png
+    ├── 13_project_statistics.png
+    ├── 14_jupyter_clean_start.png
+    ├── 15_jupyter_create_tables.png
+    ├── 16_jupyter_insert_data.png
+    ├── 17_jupyter_select.png
+    ├── 18_jupyter_join.png
+    ├── 19_jupyter_sql_dump.png
+    ├── 20_jupyter_csv_export.png
+    └── 21_datalens_dashboard.png
+```
 
 # ЧАСТЬ 1: РАБОТА В JUPYTER NOTEBOOK (Python + PostgreSQL)
 
