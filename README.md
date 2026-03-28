@@ -151,9 +151,9 @@ SELECT * FROM pm.assignments ORDER BY assignment_id;
 ```
 https://screenshots/17_jupyter_select.png
 
-Задание 5: JOIN запросы
+### Задание 5: JOIN запросы
 Задачи с названиями проектов:
-
+```
 sql
 SELECT t.title AS task_name, p.project_name, t.due_date, t.priority
 FROM pm.tasks t
@@ -202,7 +202,7 @@ project_name	status	total_tasks	assigned_employees
 Мобильное приложение	В работе	3	3
 Внедрение BI	Планируется	2	1
 https://screenshots/18_jupyter_join.png
-
+```
 🗄️ Создание SQL дампа
 Из Jupyter Notebook был сгенерирован файл pm_dump_final.sql, содержащий:
 
@@ -244,3 +244,4 @@ https://screenshots/20_jupyter_csv_export.png
 Статус проектов: 2 проекта в работе, 1 планируется
 
 Роли сотрудников: в команде представлены менеджер, разработчики (2), аналитик, тестировщик
+
