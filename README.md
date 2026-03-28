@@ -208,8 +208,8 @@ project_name	status	total_tasks	assigned_employees
 ```
 <img width="442" height="415" alt="6" src="https://github.com/user-attachments/assets/aeae02fc-c94f-48b3-ad24-da5d7e182ac5" />
 
-🗄️ Создание SQL дампа
-Из Jupyter Notebook был сгенерирован файл pm_dump_final.sql, содержащий:
+### 🗄️ Создание SQL дампа
+### Из Jupyter Notebook был сгенерирован файл pm_dump_final.sql, содержащий:
 
 ✅ CREATE SCHEMA pm
 
@@ -233,8 +233,8 @@ project_name	status	total_tasks	assigned_employees
 
 <img width="391" height="558" alt="7" src="https://github.com/user-attachments/assets/96feb803-9b4c-4460-8993-fc281a88a382" />
 
-📁 Экспорт CSV для DataLens
-Из Jupyter Notebook были созданы 5 CSV файлов для загрузки в Yandex DataLens:
+### 📁 Экспорт CSV для DataLens
+### Из Jupyter Notebook были созданы 5 CSV файлов для загрузки в Yandex DataLens:
 
 Файл	Описание	Количество записей
 datalens_employees.csv	Список сотрудников	5
@@ -245,112 +245,114 @@ datalens_dashboard.csv	Сводная статистика	3
 
 <img width="484" height="588" alt="8" src="https://github.com/user-attachments/assets/92f36914-b519-4397-a947-86735db162db" />
 
-ЧАСТЬ 2: ПРОВЕРКА SQL ДАМПА В ЛОКАЛЬНОЙ БАЗЕ ДАННЫХ
-Для проверки работоспособности SQL дампа был выполнен импорт и тестирование всех запросов в локально развернутой PostgreSQL (mylocaldb).
+# ЧАСТЬ 2: ПРОВЕРКА SQL ДАМПА В ЛОКАЛЬНОЙ БАЗЕ ДАННЫХ
+## Для проверки работоспособности SQL дампа был выполнен импорт и тестирование всех запросов в локально развернутой PostgreSQL (mylocaldb).
 
-📋 Процесс проверки
-1. Перенос дампа в текстовый документ
+### 📋 Процесс проверки
+
+### 1. Перенос дампа в текстовый документ
 SQL дамп был скопирован в текстовый файл imp.txt для удобного переноса.
 
 <img width="320" height="406" alt="10" src="https://github.com/user-attachments/assets/4181d17a-091a-4ea3-80ad-14989beea9d0" />
 
-2. Перенос файла в виртуальную машину
+### 2. Перенос файла в виртуальную машину
 Файл imp.txt был помещен в общую папку SQL_dumb для доступа из виртуальной машины.
 
 <img width="667" height="699" alt="11" src="https://github.com/user-attachments/assets/7b773661-0321-498e-921b-62a55ae12fe5" />
 
-3. Локальная база данных
+### 3. Локальная база данных
 Для проверки используется локальная база данных mylocaldb на порту 5433.
 
 <img width="556" height="434" alt="12" src="https://github.com/user-attachments/assets/90136157-9220-404f-8597-5c58c04bbf64" />
 
-4. Монтирование и проверка файлов
+### 4. Монтирование и проверка файлов
 В терминале выполнено монтирование общей папки и проверка наличия файла imp.txt:
 
-bash
+```bash
 sudo mount -t vboxfs SQL_dumb /mnt/sql_dumb
 ls /mnt/sql_dumb/
 cat /mnt/sql_dumb/imp.txt
+```
+
 <img width="566" height="639" alt="13" src="https://github.com/user-attachments/assets/a51f53dc-21a6-4f82-94e0-9abec60ad37a" />
 
-5. Выполнение SQL запросов
-Создание схемы:
+### 5. Выполнение SQL запросов
 
-sql
+**Создание схемы:**
+
+```sql
 CREATE SCHEMA IF NOT EXISTS pm;
+```
 
 <img width="528" height="546" alt="14" src="https://github.com/user-attachments/assets/1488dd13-6573-4e99-b30b-7cdd2254415d" />
 
-Создание таблиц:
+**Создание таблиц:**
 
-sql
+```sql
 CREATE TABLE IF NOT EXISTS employees (...);
 CREATE TABLE IF NOT EXISTS projects (...);
 CREATE TABLE IF NOT EXISTS tasks (...);
 CREATE TABLE IF NOT EXISTS assignments (...);
+```
 
 <img width="507" height="376" alt="15" src="https://github.com/user-attachments/assets/17c3d53b-e134-45ca-9468-78ffa4b4a9e6" />
 
-Вставка данных:
+**Вставка данных:**
 
-sql
+```sql
 INSERT INTO pm.employees VALUES (...);
 INSERT INTO pm.projects VALUES (...);
 INSERT INTO pm.tasks VALUES (...);
 INSERT INTO pm.assignments VALUES (...);
+```
 
 <img width="714" height="575" alt="16" src="https://github.com/user-attachments/assets/7a729c4f-0fe4-4451-8188-61295fcda4d8" />
 
-6. Проверочные запросы
-Статистика по таблицам:
+### 6. Проверочные запросы
 
-sql
-SELECT 'employees' AS table_name, COUNT(*) FROM pm.employees
-UNION ALL SELECT 'projects', COUNT(*) FROM pm.projects
-UNION ALL SELECT 'tasks', COUNT(*) FROM pm.tasks
-UNION ALL SELECT 'assignments', COUNT(*) FROM pm.assignments;
+**Все сотрудники:**
+
+```sql
+SELECT * FROM pm.employees ORDER BY employee_id;
+```
 
 <img width="770" height="469" alt="17" src="https://github.com/user-attachments/assets/ee1d80a1-4571-4602-8043-62f3c97e1a9f" />
 
-Все сотрудники:
+**Все проекты:**
 
-sql
-SELECT * FROM pm.employees ORDER BY employee_id;
+```sql
+SELECT * FROM pm.projects ORDER BY project_id;
+```
 
 <img width="803" height="427" alt="18" src="https://github.com/user-attachments/assets/5db3390a-8417-4484-a3d4-77248e37105c" />
 
-Все проекты:
+**Задачи с проектами:**
 
-sql
-SELECT * FROM pm.projects ORDER BY project_id;
-
-<img width="756" height="492" alt="19" src="https://github.com/user-attachments/assets/67c670c7-e3cf-4f40-b2d2-f378413294ac" />
-
-Задачи с проектами:
-
-sql
+```sql
 SELECT t.task_id, t.title, p.project_name, t.due_date, t.priority
 FROM pm.tasks t
 JOIN pm.projects p ON t.project_id = p.project_id
 ORDER BY p.project_name, t.priority;
+```
 
-<img width="730" height="487" alt="20" src="https://github.com/user-attachments/assets/16dea53d-7c02-4372-9486-92ab02b5a476" />
+<img width="756" height="492" alt="19" src="https://github.com/user-attachments/assets/67c670c7-e3cf-4f40-b2d2-f378413294ac" />
 
-Сотрудники с их задачами:
+**Сотрудники с их задачами:**
 
-sql
+```sql
 SELECT e.first_name || ' ' || e.last_name AS employee_name, 
        e.role, t.title AS task_name
 FROM pm.employees e
 JOIN pm.assignments a ON e.employee_id = a.employee_id
 JOIN pm.tasks t ON a.task_id = t.task_id
 ORDER BY e.last_name;
+```
 
-<img width="689" height="400" alt="21" src="https://github.com/user-attachments/assets/41c6a29d-2f1e-405f-9c7a-08d8ac42aafb" />
+<img width="730" height="487" alt="20" src="https://github.com/user-attachments/assets/16dea53d-7c02-4372-9486-92ab02b5a476" />
 
-Статистика по проектам:
+**Статистика по проектам:**
 
-sql
+```sql
 SELECT p.project_name, p.status,
        COUNT(DISTINCT t.task_id) AS total_tasks,
        COUNT(DISTINCT a.employee_id) AS assigned_employees
@@ -359,7 +361,9 @@ LEFT JOIN pm.tasks t ON p.project_id = t.project_id
 LEFT JOIN pm.assignments a ON t.task_id = a.task_id
 GROUP BY p.project_id, p.project_name, p.status
 ORDER BY total_tasks DESC;
-https://screenshots/13_project_statistics.png
+```
+
+<img width="689" height="400" alt="21" src="https://github.com/user-attachments/assets/41c6a29d-2f1e-405f-9c7a-08d8ac42aafb" />
 
 ✅ Результаты проверки
 Проверка	Результат
@@ -371,15 +375,15 @@ JOIN запросы	✅ Успешно
 Статистика	✅ Соответствует ожидаемой
 Итог: Все SQL запросы из дампа успешно выполнены в локальной базе данных, структура и данные соответствуют ожидаемым.
 
-ЧАСТЬ 3: ВИЗУАЛИЗАЦИЯ В YANDEX DATALENS
-📊 Дашборд в Yandex DataLens
+# ЧАСТЬ 3: ВИЗУАЛИЗАЦИЯ В YANDEX DATALENS
+## 📊 Дашборд в Yandex DataLens
 🔗 Ссылка на дашборд
 https://datalens.ru/x1sorpl406pyh-project-management-dashboard
 
 📸 Скриншот дашборда
 <img width="1220" height="460" alt="9" src="https://github.com/user-attachments/assets/635a1272-86c5-4817-915f-1dfdc82d2526" />
 
-Содержание дашборда
+**Содержание дашборда**
 Дашборд включает 4 интерактивные диаграммы:
 
 №	Название	Тип	Что показывает
