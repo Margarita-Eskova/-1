@@ -269,7 +269,9 @@ datalens_dashboard.csv	Сводная статистика	3
 SQL дамп был скопирован в текстовый файл imp.txt для удобного переноса.
 
 <img width="320" height="406" alt="10" src="https://github.com/user-attachments/assets/4181d17a-091a-4ea3-80ad-14989beea9d0" />
-
+<br>
+<br>
+<br>
 ### 2. Перенос файла в виртуальную машину
 Файл imp.txt был помещен в общую папку SQL_dumb для доступа из виртуальной машины.
 
