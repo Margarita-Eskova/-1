@@ -248,10 +248,10 @@ project_name	status	total_tasks	assigned_employees
 
 <img width="391" height="558" alt="7" src="https://github.com/user-attachments/assets/96feb803-9b4c-4460-8993-fc281a88a382" />
 
-### 📁 Экспорт CSV для DataLens
-### Из Jupyter Notebook были созданы 5 CSV файлов для загрузки в Yandex DataLens:
+## 📁 Экспорт CSV для DataLens
+## Из Jupyter Notebook были созданы 5 CSV файлов для загрузки в Yandex DataLens:
 
-## 📁 CSV файлы для DataLens
+### 📁 CSV файлы для DataLens
 
 | Файл | Описание | Количество записей |
 |------|----------|-------------------|
