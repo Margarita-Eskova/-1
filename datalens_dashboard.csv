@@ -1,0 +1,4 @@
+﻿project_name,project_status,total_tasks,assigned_employees,high_priority_tasks,medium_priority_tasks,low_priority_tasks,earliest_deadline,latest_deadline
+Разработка CRM,В работе,3,3,2,1,0,2023-10-15,2023-12-15
+Мобильное приложение,В работе,3,3,2,1,0,2023-12-15,2024-03-15
+Внедрение BI,Планируется,2,1,1,1,0,2024-02-10,2024-03-01
