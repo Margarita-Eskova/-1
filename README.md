@@ -252,10 +252,15 @@ project_name	status	total_tasks	assigned_employees
 ### Из Jupyter Notebook были созданы 5 CSV файлов для загрузки в Yandex DataLens:
 
 Файл	Описание	Количество записей
+
 datalens_employees.csv	Список сотрудников	5
+
 datalens_projects.csv	Список проектов	3
+
 datalens_tasks.csv	Задачи с приоритетами	8
+
 datalens_assignments.csv	Назначения сотрудников	8
+
 datalens_dashboard.csv	Сводная статистика	3
 
 <img width="484" height="588" alt="8" src="https://github.com/user-attachments/assets/92f36914-b519-4397-a947-86735db162db" />
