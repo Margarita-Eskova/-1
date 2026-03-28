@@ -72,7 +72,8 @@ project-management-dashboard/
   - `assignments` — назначения
 - Добавлены внешние ключи и ограничения
 
-![Задание 2](screenshots/15_jupyter_create_tables.png)
+<img width="427" height="571" alt="2" src="https://github.com/user-attachments/assets/91e7b22e-ca83-43a6-9915-3a0a247caaac" />
+
 
 ### Задание 3: Наполнение данными
 В базу данных добавлены:
@@ -124,7 +125,8 @@ project-management-dashboard/
 | 7 | Разработка iOS | Дмитрий Соколов |
 | 8 | Тестирование приложения | Алексей Федоров |
 
-![Задание 3](screenshots/16_jupyter_insert_data.png)
+<img width="401" height="575" alt="3" src="https://github.com/user-attachments/assets/875ce8ff-24ce-42f4-9436-ee56d676f666" />
+
 
 ### Задание 4: Простые SELECT запросы
 Выполнены запросы ко всем таблицам:
@@ -148,7 +150,10 @@ SELECT * FROM pm.tasks ORDER BY task_id;
 ```sql
 SELECT * FROM pm.assignments ORDER BY assignment_id;
 ```
-screenshots/17_jupyter_select.png
+
+<img width="421" height="566" alt="4" src="https://github.com/user-attachments/assets/4997438a-0f3a-487e-bb6b-8491c54b2f95" />
+<img width="362" height="405" alt="5" src="https://github.com/user-attachments/assets/4906668d-b10c-47a5-99b2-3af574a24f98" />
+
 
 ### Задание 5: JOIN запросы
 Задачи с названиями проектов:
@@ -201,7 +206,7 @@ project_name	status	total_tasks	assigned_employees
 Мобильное приложение	В работе	3	3
 Внедрение BI	Планируется	2	1
 ```
-https://screenshots/18_jupyter_join.png
+<img width="442" height="415" alt="6" src="https://github.com/user-attachments/assets/aeae02fc-c94f-48b3-ad24-da5d7e182ac5" />
 
 🗄️ Создание SQL дампа
 Из Jupyter Notebook был сгенерирован файл pm_dump_final.sql, содержащий:
@@ -226,7 +231,7 @@ https://screenshots/18_jupyter_join.png
 
 Назначений: 8
 
-screenshots/19_jupyter_sql_dump.png
+<img width="391" height="558" alt="7" src="https://github.com/user-attachments/assets/96feb803-9b4c-4460-8993-fc281a88a382" />
 
 📁 Экспорт CSV для DataLens
 Из Jupyter Notebook были созданы 5 CSV файлов для загрузки в Yandex DataLens:
@@ -237,7 +242,7 @@ datalens_projects.csv	Список проектов	3
 datalens_tasks.csv	Задачи с приоритетами	8
 datalens_assignments.csv	Назначения сотрудников	8
 datalens_dashboard.csv	Сводная статистика	3
-screenshots/20_jupyter_csv_export.png
+<img width="484" height="588" alt="8" src="https://github.com/user-attachments/assets/92f36914-b519-4397-a947-86735db162db" />
 
 ЧАСТЬ 2: ПРОВЕРКА SQL ДАМПА В ЛОКАЛЬНОЙ БАЗЕ ДАННЫХ
 Для проверки работоспособности SQL дампа был выполнен импорт и тестирование всех запросов в локально развернутой PostgreSQL (mylocaldb).
@@ -246,17 +251,17 @@ screenshots/20_jupyter_csv_export.png
 1. Перенос дампа в текстовый документ
 SQL дамп был скопирован в текстовый файл imp.txt для удобного переноса.
 
-https://screenshots/1_sql_dump_to_txt.png
+<img width="320" height="406" alt="10" src="https://github.com/user-attachments/assets/4181d17a-091a-4ea3-80ad-14989beea9d0" />
 
 2. Перенос файла в виртуальную машину
 Файл imp.txt был помещен в общую папку SQL_dumb для доступа из виртуальной машины.
 
-https://screenshots/2_transfer_to_vm.png
+<img width="667" height="699" alt="11" src="https://github.com/user-attachments/assets/7b773661-0321-498e-921b-62a55ae12fe5" />
 
 3. Локальная база данных
 Для проверки используется локальная база данных mylocaldb на порту 5433.
 
-https://screenshots/3_local_db.png
+<img width="556" height="434" alt="12" src="https://github.com/user-attachments/assets/90136157-9220-404f-8597-5c58c04bbf64" />
 
 4. Монтирование и проверка файлов
 В терминале выполнено монтирование общей папки и проверка наличия файла imp.txt:
@@ -265,14 +270,15 @@ bash
 sudo mount -t vboxfs SQL_dumb /mnt/sql_dumb
 ls /mnt/sql_dumb/
 cat /mnt/sql_dumb/imp.txt
-https://screenshots/4_mount_and_check.png
+<img width="566" height="639" alt="13" src="https://github.com/user-attachments/assets/a51f53dc-21a6-4f82-94e0-9abec60ad37a" />
 
 5. Выполнение SQL запросов
 Создание схемы:
 
 sql
 CREATE SCHEMA IF NOT EXISTS pm;
-https://screenshots/5_create_schema.png
+
+<img width="528" height="546" alt="14" src="https://github.com/user-attachments/assets/1488dd13-6573-4e99-b30b-7cdd2254415d" />
 
 Создание таблиц:
 
@@ -281,7 +287,8 @@ CREATE TABLE IF NOT EXISTS employees (...);
 CREATE TABLE IF NOT EXISTS projects (...);
 CREATE TABLE IF NOT EXISTS tasks (...);
 CREATE TABLE IF NOT EXISTS assignments (...);
-https://screenshots/6_create_tables.png
+
+<img width="507" height="376" alt="15" src="https://github.com/user-attachments/assets/17c3d53b-e134-45ca-9468-78ffa4b4a9e6" />
 
 Вставка данных:
 
@@ -290,7 +297,8 @@ INSERT INTO pm.employees VALUES (...);
 INSERT INTO pm.projects VALUES (...);
 INSERT INTO pm.tasks VALUES (...);
 INSERT INTO pm.assignments VALUES (...);
-https://screenshots/7_insert_data.png
+
+<img width="714" height="575" alt="16" src="https://github.com/user-attachments/assets/7a729c4f-0fe4-4451-8188-61295fcda4d8" />
 
 6. Проверочные запросы
 Статистика по таблицам:
@@ -300,19 +308,22 @@ SELECT 'employees' AS table_name, COUNT(*) FROM pm.employees
 UNION ALL SELECT 'projects', COUNT(*) FROM pm.projects
 UNION ALL SELECT 'tasks', COUNT(*) FROM pm.tasks
 UNION ALL SELECT 'assignments', COUNT(*) FROM pm.assignments;
-https://screenshots/8_table_statistics.png
+
+<img width="770" height="469" alt="17" src="https://github.com/user-attachments/assets/ee1d80a1-4571-4602-8043-62f3c97e1a9f" />
 
 Все сотрудники:
 
 sql
 SELECT * FROM pm.employees ORDER BY employee_id;
-https://screenshots/9_all_employees.png
+
+<img width="803" height="427" alt="18" src="https://github.com/user-attachments/assets/5db3390a-8417-4484-a3d4-77248e37105c" />
 
 Все проекты:
 
 sql
 SELECT * FROM pm.projects ORDER BY project_id;
-https://screenshots/10_all_projects.png
+
+<img width="756" height="492" alt="19" src="https://github.com/user-attachments/assets/67c670c7-e3cf-4f40-b2d2-f378413294ac" />
 
 Задачи с проектами:
 
@@ -321,7 +332,8 @@ SELECT t.task_id, t.title, p.project_name, t.due_date, t.priority
 FROM pm.tasks t
 JOIN pm.projects p ON t.project_id = p.project_id
 ORDER BY p.project_name, t.priority;
-https://screenshots/11_tasks_with_projects.png
+
+<img width="730" height="487" alt="20" src="https://github.com/user-attachments/assets/16dea53d-7c02-4372-9486-92ab02b5a476" />
 
 Сотрудники с их задачами:
 
@@ -332,7 +344,8 @@ FROM pm.employees e
 JOIN pm.assignments a ON e.employee_id = a.employee_id
 JOIN pm.tasks t ON a.task_id = t.task_id
 ORDER BY e.last_name;
-https://screenshots/12_employees_with_tasks.png
+
+<img width="689" height="400" alt="21" src="https://github.com/user-attachments/assets/41c6a29d-2f1e-405f-9c7a-08d8ac42aafb" />
 
 Статистика по проектам:
 
@@ -363,7 +376,7 @@ JOIN запросы	✅ Успешно
 https://datalens.ru/x1sorpl406pyh-project-management-dashboard
 
 📸 Скриншот дашборда
-https://screenshots/21_datalens_dashboard.png
+<img width="1220" height="460" alt="9" src="https://github.com/user-attachments/assets/635a1272-86c5-4817-915f-1dfdc82d2526" />
 
 Содержание дашборда
 Дашборд включает 4 интерактивные диаграммы:
